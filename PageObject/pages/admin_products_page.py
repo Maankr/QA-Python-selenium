@@ -23,7 +23,7 @@ class AdminProductsPage(BasePage):
         self.click(AdminProductsLocators.CONFIRM_DELETE)
 
     def is_product_added(self):
-        return self.is_visible(AdminProductsLocators.ADD_SUCCESS)
+        return self.is_visible(AdminProductsLocators.SUCCESS_MESSAGE)
 
     def is_product_deleted(self):
-        return self.is_visible(AdminProductsLocators.DELETE_SUCCESS)
+        return self.is_visible(AdminProductsLocators.SUCCESS_MESSAGE)

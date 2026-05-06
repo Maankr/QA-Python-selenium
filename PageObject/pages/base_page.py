@@ -1,5 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 
 class BasePage:
@@ -29,9 +30,8 @@ class BasePage:
         try:
             self.wait.until(EC.visibility_of_element_located(locator))
             return True
-        except:
+        except TimeoutException:
             return False
-
 
     def switch_to_frame(self, locator):
         iframe = self.find(locator)

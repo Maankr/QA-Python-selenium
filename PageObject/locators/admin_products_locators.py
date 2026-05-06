@@ -17,5 +17,4 @@ class AdminProductsLocators:
     CONFIRM_DELETE = (By.CSS_SELECTOR, ".btn-confirm-submit")
 
     # по allert проверка не проходит и не может найти сообщение поэтому тест падает, сделала через XPATH
-    DELETE_SUCCESS = (By.XPATH, "//div[@role='alert']//p[contains(.,'Successful')]")
-    ADD_SUCCESS = (By.XPATH, "//div[@role='alert']//p[contains(.,'Successful')]")
+    SUCCESS_MESSAGE = (By.XPATH, "//div[@role='alert']//p[contains(.,'Successful')]")
