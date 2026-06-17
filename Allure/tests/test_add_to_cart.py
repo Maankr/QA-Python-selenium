@@ -1,7 +1,8 @@
 from pages.home_page import HomePage
 from pages.product_page import ProductPage
+import allure
 
-
+@allure.title("Тест добавления продукта в корзину")
 def test_add_to_cart(driver, base_url):
     home = HomePage(driver)
     home.open(base_url)
